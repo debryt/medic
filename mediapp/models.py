@@ -46,3 +46,57 @@ class ward(models.Model):
     bedsavailable = models.IntegerField()
     def __str__(self):
         return self.name
+
+
+class Appointment(models.Model):
+    name = models.CharField(max_length=100)
+    email= models.EmailField()
+    phone = models.CharField(max_length=100)
+    date = models.DateField()
+    department = models.CharField(max_length=100)
+    doctor = models.CharField(max_length=100)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+class contact(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    subject = models.CharField(max_length=100)
+    message = models.TextField()
+    def __str__(self):
+        return self.name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
